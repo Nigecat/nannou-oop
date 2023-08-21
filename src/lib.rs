@@ -4,14 +4,14 @@ use std::cell::RefCell;
 pub trait Model {
     fn init(&mut self, _app: &App) {}
 
-    fn update(&mut self, app: &App, update: nannou::prelude::Update);
+    fn update(&mut self, _app: &App, _update: nannou::prelude::Update) {}
 
     fn view(&self, app: &App, frame: Frame);
 }
 
 // Shadow [`nannou::App`]
 /// Begin building the `App`.
-pub fn app<T, F>(model: T, setup: Option<F>)
+pub fn app<T, F>(model: T, setup: F)
 where
     T: Model,
     F: Fn(app::Builder<(), Event>) -> app::Builder<(), Event>,
@@ -45,11 +45,7 @@ where
         });
     }
 
-    let mut app = ::nannou::app(init).update(update).simple_window(view);
-    if let Some(setup) = setup {
-        app = setup(app);
-    }
-    app.run();
+    setup(::nannou::app(init).update(update).simple_window(view)).run();
 
     // Ensure we don't trigger a memory leak
     DATA.with(|data| {
