@@ -47,7 +47,7 @@ where
 
     setup(::nannou::app(init).update(update).simple_window(view)).run();
 
-    // Ensure we don't trigger a memory leak
+    // Ensure we don't leak memory
     DATA.with(|data| {
         data.replace(None);
     });
