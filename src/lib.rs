@@ -9,9 +9,8 @@ pub trait Model {
     fn view(&self, app: &App, frame: Frame);
 }
 
-// Shadow [`nannou::App`]
-/// Begin building the `App`.
-pub fn app<T, F>(model: T, setup: F)
+/// Run the given model
+pub fn run<T, F>(model: T, setup: F)
 where
     T: Model,
     F: Fn(app::Builder<(), Event>) -> app::Builder<(), Event>,

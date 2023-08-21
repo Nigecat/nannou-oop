@@ -14,5 +14,5 @@ fn main() {
     let app = App {
         color: nannou::prelude::CYAN,
     };
-    nannou::app(app, |builder| builder);
+    nannou::run(app, |builder| builder);
 }
