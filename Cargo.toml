@@ -1,5 +1,5 @@
 [package]
-name = "nannou-oop"
+name = "nannou_oop"
 version = "0.18.1"
 edition = "2021"
 
