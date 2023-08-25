@@ -17,15 +17,15 @@ struct App {
 }
 
 impl nannou::Model for App {
-    fn init(&mut self, app: &App) {
+    fn init(&mut self, app: &nannou::App) {
         // model init function
     }
 
-    fn update(&mut self, app: &App, update: Update) {
+    fn update(&mut self, app: &nannou::App, update: Update) {
         // update function
     }
 
-    fn view(&self, app: &App, frame: Frame) {
+    fn view(&self, app: &nannou::App, frame: Frame) {
         // view function
     }
 }
