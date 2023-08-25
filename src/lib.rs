@@ -1,3 +1,5 @@
+//! This crate acts as a drop-in replacement for the [nannou](https://github.com/nannou-org/nannou) crate that provides an additional [`Model`] trait to allow persisting state easier.
+
 pub use nannou::*;
 use std::cell::RefCell;
 
