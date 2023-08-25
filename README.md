@@ -26,7 +26,8 @@ impl nannou::Model for App {
     }
 }
 ```
-where the original init/update/view methods can be inlined to allow access to `self`.
+where the original init/update/view methods can be inlined to allow access to `self`.  
+(view your local docs if you need more info)
 
 ## Installation
 ```toml
