@@ -35,7 +35,7 @@ fn main() {
 }
 ```
 where the original init/update/view methods can be inlined to allow access to `self`.  
-See [examples/basic.rs] for a runnable demo. 
+See [examples/basic.rs](examples/basic.rs) for a runnable demo. 
 
 ## Installation
 ```toml
